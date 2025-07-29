@@ -1,0 +1,562 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=M+PLUS+Rounded+1c&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=M+PLUS+Rounded+1c&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=M+PLUS+Rounded+1c&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #EAE4D5;
+  overflow-x: hidden;
+  /* font-family: Lato; */
+}
+/* .navbar {
+  height: 10vh;
+  background-color: blue;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+  position: relative;
+  flex-wrap: wrap;
+} */
+.navbar {
+  position: fixed;         /* Fix the navbar at top */
+  top: 0;                  /* Stick to the very top */
+  left: 0;
+  right: 0;
+  z-index: 1000;           /* Make sure it's above everything */
+  height: 100px;
+  background-color: rgba(242, 242, 242,0.8);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 40px;
+  margin-top: 20px;
+  width: 40px;
+  border-radius: 50%;
+}
+.logo {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  margin: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.menu {
+  display: none;
+}
+
+.admin-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-login button {
+  border-radius: 10px;
+  height: 40px;
+  min-width: 100px;
+  border-style: none;
+  background-color: #000000;
+  color: white;
+  padding: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#cross-menu {
+  display: none;
+  color: black;
+}
+
+.navbar a:hover {
+    color: #B6B09F;
+  }
+
+/*  */
+.home{
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./assets/images/pexels-vlada-karpovich-7368308.jpg");
+  background-size: cover;
+  background-position: center ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-card{
+  max-width: 500px;
+  background-color: rgba(242, 242, 242,0.8);
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px;
+}
+
+.home-card span:hover{
+  cursor: pointer;
+  color: tomato;
+}
+
+.home-card button{
+  height: 40px;
+  width: 100px;
+  background-color: #000000;
+  color: #B6B09F;
+  border-style: none;
+  border-radius: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+/*  */
+
+.services-cards img{
+  max-height: 50px;
+  max-width: 50px;
+}
+.services-heading{
+  margin-top: 40px;
+  text-align: center;
+  font-size: 40px;
+}
+.services-cards{
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 70px;
+  gap: 40px;
+  /* border: 2px solid green; */
+}
+.service-cards{
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  /* border: 2px solid; */
+  background-color: rgba(242, 242, 242,0.8);
+  box-shadow: -4px 10px 15px rgba(0, 0, 0, 0.08), -4px 10px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  min-height: 300px;
+  width: 350px;
+  transition: all 1s;
+  
+}
+.service-cards p,img,h2{
+  margin-bottom: 20px;
+}
+
+.service-cards:hover{
+  transform: scale(1.03);
+}
+
+.about-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-card{
+  text-align: center;
+  max-width: 700px;
+  height: 290px;
+  padding: 40px;
+  background-color:rgba(242, 242, 242,0.8);
+  border-radius: 10px;
+}
+.about-card button{
+  margin-top: 20px;
+  height: 40px;
+  width: 100px;
+  border-style: none;
+  border-radius: 20px;
+  background-color: #000000;
+  color: #EAE4D5;
+  cursor: pointer;
+}
+.about-card h2{
+  margin-top: 10px;
+}
+
+
+.gallery-container h1{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.gallery{
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.gallery img{
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  transition: all 1s;
+}
+.gallery img:hover{
+  transform: scale(1.05);
+  box-shadow: -4px 10px 15px rgba(0, 0, 0, 0.08), -4px 10px 15px rgba(0, 0, 0, 0.08);
+  
+}
+.packages-heading{
+  text-align: center;
+  font-size: 40px;
+}
+.package-card-container{
+  /* border: 2px solid; */
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 30px;
+}
+.pack-cards{
+  /* border: 2px solid red; */
+  height: 550px;
+  background-color: rgba(242, 242, 242,0.8);
+  box-shadow: -4px 10px 15px rgba(0, 0, 0, 0.08), -4px 10px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  width: 300px;
+}
+.card-body{
+  padding: 10px;
+
+}
+.card-body img{
+  height: 20px;
+  margin-bottom: 10px;
+  max-width: 20px;
+}
+.card-body p{
+  margin-bottom: 20px;
+}
+.pack-cards button{
+  margin-left: 10px;
+  height: 40px;
+  width: 90px;
+  border-style: none;
+  background-color: #000000;
+  color: #EAE4D5;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.pack-cards button:hover{
+  transform:scale(1.03);
+  background-color:#EAE4D5;
+  color: #000000;
+
+}
+.pack-cards img{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 300px;
+}
+
+.bookings{
+  margin: 50px;
+  /* border: 2px solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+}
+.bookings-form{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.form-box{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.form-box input{
+  padding: 10px;
+  height: 40px;
+  border-style: none;
+  border-radius: 10px;
+}
+.form-box textarea{
+  resize: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+.sub-Btn{
+  height: 40px;
+  width:300px;
+  border-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.sub-Btn:hover{
+  box-shadow: -4px 10px 15px rgba(0, 0, 0, 0.08), -4px 10px 15px rgba(0, 0, 0, 0.08);
+}
+.submit-btn{
+  display: flex;
+  justify-content: center;
+}
+
+.reviews{
+  margin: 30px;
+}
+.reviews>h1{
+  text-align: center;
+  margin: 20px;
+}
+
+.review-card-top{
+  display: flex;
+  gap: 20px;
+}
+.review-card-top img{
+  border-radius: 50%;
+  height: 40px;
+}
+
+.review-card>img{
+  height: 20px;
+}
+.review-cards{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.review-card{
+  /* border: 2px solid; */
+  box-shadow: -4px 10px 15px rgba(0, 0, 0, 0.08), -4px 10px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+}
+#contact{
+  margin: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+#contact form{
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+.contact-box{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.form1 input{
+  height: 40px;
+  border-style: none;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+.form1 textarea{
+  resize: none;
+  border-style: none;
+  border-radius: 10px;
+  padding: 10px;
+  height: 150px;
+  width: 300px;
+}
+.form1 button{
+  height: 40px;
+  width: 250px;
+  border-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+  align-self: center;
+}
+
+hr{
+  height: 3px;
+  border: none;
+  z-index: 2;
+  background-color: rgba(242, 242, 242,0.8);;
+}
+
+footer{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.08);
+  justify-content:space-around;
+  gap: 30px;
+}
+.footer-boxes h1{
+  text-decoration: underline;
+}
+.footer-boxes{
+  margin: 30px;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.social-media-icons img{
+  height: 30px;
+
+}
+.link-container{
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+.link-container a{
+  text-decoration: none;
+  color: #000000;
+}
+.link-container a:hover{
+  color: #fff;
+}
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .menu {
+    display: block;
+  }
+  .logo h1{
+    display: none;
+  }
+
+  .menu button {
+    height: 40px;
+    width: 60px;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .navbar a{
+    color: #EAE4D5;
+  }
+
+  .nav-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    padding: 10px 0;
+  }
+
+  .nav-content.active {
+    display: flex;
+  }
+
+  .admin-login {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+  }
+
+  .admin-login button {
+    margin-top: 5px;
+  }
+
+  .services-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .service-cards{
+    max-width: 300px;
+  }
+  .about-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .about-container img{
+    width: 300px;
+  }
+  .about-card button{
+    margin-top: 10px;
+  }
+
+  
+.gallery{
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-container h1{
+  margin-top: 20px;
+  text-align: center;
+}
+.package-card-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.bookings{
+  display: flex;
+  flex-direction: column;
+
+}
+.bookings img{
+  width: 300px;
+}
+.bookings-form{
+  width: 300px;
+}
+
+.review-cards{
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+  align-items: center;
+}
+.reviews>h1{
+  font-size: 20px;
+}
+#contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  
+}
