@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Destination Sign In</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+    }
+
+    #login-card {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    #login-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: url(./assets/images/login-bg\(3\).jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: blur(2px);
+      z-index: -1;
+    }
+
+    h1{
+        margin-bottom: 30px;
+    }
+    .login-card-content {
+      height: 400px;
+      width: 400px;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(2px);
+      box-shadow: -4px 15px 15px rgba(0,0,0,0.3), -4px 10px 10px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+      align-items: center;
+      border-radius: 25px;
+    }
+
+    .login-card-content input {
+      height: 50px;
+      width: 300px;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .login-card-content button {
+      height: 45px;
+      width: 100px;
+      border-radius: 10px;
+      border: none;
+      background-color: #089274;
+      color: #fff;
+      cursor: pointer;
+    }
+    p{
+        margin-top: 20px;
+    }
+    a{
+        color: purple;
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="login-card">
+    <div class="login-card-content" id="login-container">
+      <h1>Sign In</h1>
+      <input type="email" id="user_name" placeholder="Enter email" required />
+      <input type="password" id="user_password" placeholder="Password" required />
+      <!-- <a href="">forgot password?</a> -->
+      <button onclick=handleSignIn()>Sign In</button>
+      <p>Not a Member? <a href="./signup.html">Sign Up</a></p>
+      <p>Join as <a href="./homepage.html">Guest</a></p>
+    </div>
+  </div>
+  <script>
+    let handleSignIn = () => {
+    // let attempts=0
+    let user_name = document.getElementById("user_name").value
+    let user_password = document.getElementById("user_password").value
+    // console.log(user_name,user_password);
+    let user_credentials = window.localStorage.getItem("users")
+    // console.log(user_credentials,typeof(user_credentials));
+    if(!user_credentials){
+        alert(`Seems you are not registered :(\nplease Signup and try again :)`)
+    }else{
+        user_credentials = JSON.parse(user_credentials)
+        let match = false
+        user_credentials.forEach((v) => {
+            if ((v.mail == user_name || v.mob == user_name) && (v.password === user_password)) {
+                alert("Login successful!")
+                match = true
+                location.assign('homepage.html')
+
+            }
+        })
+        if (match == false) {
+            alert("Invalid username or password")
+        }
+
+    }
+
+    }
+    
+</script>
+</body>
+</html>
