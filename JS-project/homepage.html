@@ -13,17 +13,17 @@
       <h1 style="color: black;">Destination</h1>
     </div>
     <div class="nav-content">
-      <li><a href="">Home</a></li>
+      <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#packages">Packages</a></li>
-      <li><a href="">Country info</a></li>
-      <li><a href="">Book</a></li>
-      <li><a href="">Reviews</a></li>
-      <li><a href="">Contact</a></li>
+      <li><a href="./countryInfo.html">Country info</a></li>
+      <li><a href="#tripbookings">Book</a></li>
+      <li><a href="#Reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
       <!-- Admin login inside nav-content -->
       <div class="admin-login">
-        <li><a href="">Guest</a></li>
+        <li><a href="index.html" target="_self">Logout</a></li>
         <button>Admin Login</button>
       </div>
     </div>
@@ -32,8 +32,8 @@
       <button id="menu-bar">&#9776;</button>
     </div>
   </nav>
-
-  <div class="head">
+<div id="whole-body">
+  <div class="head" id="home">
       <div class="home">
         <div class="home-card">
           <h1><span>Travel</span> <span>The</span> <span>World</span> & <span>Explore</span> <span>The</span> <span>New</span> <span>Destination</span></h1>
@@ -106,7 +106,7 @@
           <img src="./assets/images/star.png" alt="">
           <h1>Price: $999</h1>
         </div>
-        <a href="#packages"><button>Book Now</button></a>
+        <a href="#tripbookings"><button class="booking-btn">Book Now</button></a>
       </div>
       <div class="pack-cards">
         <img src="./assets/images/Italy.png" alt="">
@@ -120,7 +120,7 @@
           <img src="./assets/images/star.png" alt="">
           <h1>Price: $999</h1>
         </div>
-        <a href="#packages"><button>Book Now</button></a>
+        <a href="#tripbookings"><button class="booking-btn">Book Now</button></a>
       </div>
       <div class="pack-cards">
         <img src="./assets/images/Mexico.png" alt="">
@@ -134,7 +134,7 @@
           <img src="./assets/images/star.png" alt="">
           <h1>Price: $999</h1>
         </div>
-        <a href="#packages"><button>Book Now</button></a>
+        <a href="#tripbookings"><button class="booking-btn">Book Now</button></a>
       </div>
       <div class="pack-cards">
         <img src="./assets/images/Spain.png" alt="">
@@ -148,7 +148,7 @@
           <img src="./assets/images/star.png" alt="">
           <h1>Price: $999</h1>
         </div>
-        <a href="#packages"><button>Book Now</button></a>
+        <a href="#tripbookings"><button class="booking-btn">Book Now</button></a>
       </div>
       <div class="pack-cards">
         <img src="./assets/images/united state.png" alt="">
@@ -162,7 +162,7 @@
           <img src="./assets/images/star.png" alt="">
           <h1>Price: $999</h1>
         </div>
-        <a href="#packages"><button>Book Now</button></a>
+        <a href="#tripbookings"><button class="booking-btn">Book Now</button></a>
       </div>
       <div class="pack-cards">
         <img src="./assets/images/jordan.png" alt="">
@@ -176,7 +176,7 @@
           <img src="./assets/images/star.png" alt="">
           <h1>Price: $999</h1>
         </div>
-        <a href="#packages"><button>Book Now</button></a>
+        <a href="#tripbookings"><button class="booking-btn">Book Now</button></a>
       </div>
       <div class="pack-cards">
         <img src="./assets/images/china.png" alt="">
@@ -190,7 +190,7 @@
           <img src="./assets/images/star.png" alt="">
           <h1>Price: $999</h1>
         </div>
-        <a href="#packages"><button>Book Now</button></a>
+        <a href="#tripbookings"><button class="booking-btn">Book Now</button></a>
       </div>
       <div class="pack-cards">
         <img src="./assets/images/Greece.png" alt="">
@@ -204,15 +204,15 @@
           <img src="./assets/images/star.png" alt="">
           <h1>Price: $999</h1>
         </div>
-        <a href="#packages"><button>Book Now</button></a>
+        <a href="#tripbookings"><button class="booking-btn">Book Now</button></a>
       </div>
     </div>
   </div>
-  <div class="bookings">
+  <div class="bookings" id="tripbookings">
     <img src="./assets/images/book-img.png" alt="">
     <div class="bookings-form">
       <h1>Book Your Destination</h1>
-      <form action="">
+      <form action="" id="booking-data">
         <div class="form-box">
             <label for="name">Name</label>
             <input type="text" id="name" placeholder="Enter Your Name " required>
@@ -248,7 +248,7 @@
         </form>
     </div>
   </div>
-  <div class="reviews">
+  <div class="reviews" id="Reviews">
     <h1>What Customers Say</h1>
     <div class="review-cards">
       <div class="review-card">
@@ -336,25 +336,26 @@
       <p>Policy</p>
     </div>
   </footer>
-  <p style="text-align: center;">Designed by Sudheer</p>
-  
+</div>
+<p style="text-align: center;">Designed by Sudheer</p>
+<div id="status">sudheer</div>
+<script>
+  let menuBar = document.getElementById("menu-bar");
+  let crossMenu = document.getElementById("cross-menu");
+  let navContent = document.getElementsByClassName("nav-content")[0];
 
-  <script>
-    let menuBar = document.getElementById("menu-bar");
-    let crossMenu = document.getElementById("cross-menu");
-    let navContent = document.getElementsByClassName("nav-content")[0];
+  menuBar.onclick = () => {
+    menuBar.style.display = "none";
+    crossMenu.style.display = "inline-block";
+    navContent.classList.add("active");
+  };
 
-    menuBar.onclick = () => {
-      menuBar.style.display = "none";
-      crossMenu.style.display = "inline-block";
-      navContent.classList.add("active");
-    };
-
-    crossMenu.onclick = () => {
-      menuBar.style.display = "inline-block";
-      crossMenu.style.display = "none";
-      navContent.classList.remove("active");
-    };
-  </script>
+  crossMenu.onclick = () => {
+    menuBar.style.display = "inline-block";
+    crossMenu.style.display = "none";
+    navContent.classList.remove("active");
+  };
+</script>
+  <script src="./script.js"></script>
 </body>
 </html>

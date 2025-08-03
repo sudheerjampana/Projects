@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*  */
+        #main-container{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #main-container button{
+            height:50px;
+            width: 150px;
+            border-style: none;
+            border-radius: 15px;
+            color: green;
+        }
+        #main-container button:hover{
+            cursor: pointer;
+            background-color: green;
+            color: #fff;
+
+        }
+        .sub-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #booking-content{
+            justify-self: center;
+            margin: 250px;
+        }
+        #booking-content th{
+            background-color: #fff;
+        }
+        .booking-tables{
+            background-color: tomato;
+            /* margin: 100px; */     
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+          <a href=""><img src="./assets/icons/trip.gif" alt="Logo"/></a>
+          <h1 style="color: black;">Destination</h1>
+        </div>
+        <div class="nav-content">
+          <li><a href="./homepage.html#home">Home</a></li>
+          <li><a href="./homepage.html#services">Services</a></li>
+          <li><a href="./homepage.html#about">About</a></li>
+          <li><a href="homepage.html#packages">Packages</a></li>
+          <li><a href="./countryInfo.html">Country info</a></li>
+          <li><a href="homepage.html#tripbookings">Book</a></li>
+          <li><a href="homepage.html#Reviews">Reviews</a></li>
+          <li><a href="homepage.html#contact">Contact</a></li>
+          <!-- Admin login inside nav-content -->
+          <div class="admin-login">
+            <li><a href="">Guest</a></li>
+            <button>Admin Login</button>
+          </div>
+        </div>
+        <div class="menu">
+          <button id="cross-menu">&#x2715;</button>
+          <button id="menu-bar">&#9776;</button>
+        </div>
+    </nav>
+    <div id="main-container">
+        <img src="./assets/images/booking-ok.gif" alt="">
+        <button id="booking-view-btn">View Bookings</button>
+    </div>
+    <div id="booking-content"></div>
+    <script src="status.js"></script>
+</body>
+</html>

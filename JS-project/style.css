@@ -2,6 +2,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=M+PLUS+Rounded+1c&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=M+PLUS+Rounded+1c&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=M+PLUS+Rounded+1c&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=M+PLUS+Rounded+1c&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +11,7 @@
 body{
   background-color: #EAE4D5;
   overflow-x: hidden;
-  /* font-family: Lato; */
+  font-family: nunito;
 }
 /* .navbar {
   height: 10vh;
@@ -184,9 +185,10 @@ li {
   padding: 40px;
   background-color:rgba(242, 242, 242,0.8);
   border-radius: 10px;
+  font-size: 15px !important;
 }
 .about-card button{
-  margin-top: 20px;
+  margin-top: 10px;
   height: 40px;
   width: 100px;
   border-style: none;
@@ -195,8 +197,8 @@ li {
   color: #EAE4D5;
   cursor: pointer;
 }
-.about-card h2{
-  margin-top: 10px;
+.about-card h2,h1{
+  margin-top: 5px;
 }
 
 
@@ -249,11 +251,17 @@ li {
 }
 .card-body img{
   height: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   max-width: 20px;
 }
 .card-body p{
   margin-bottom: 20px;
+}
+.card-body h2{
+  font-size: 19px;
+}
+.card-body h1{
+  font-size: 15px !important;
 }
 .pack-cards button{
   margin-left: 10px;
@@ -437,6 +445,13 @@ footer{
 }
 .link-container a:hover{
   color: #fff;
+}
+.status-container{
+  background-image: url("./assets/images/Check\ Ok\ GIF\ by\ RainToMe.gif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 /* Responsive styles */
 @media (max-width: 1024px) {

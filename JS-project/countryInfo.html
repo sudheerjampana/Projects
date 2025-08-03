@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Info</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .country-home{
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+        .country-home p{
+            font-size: 30px;
+        }
+        .country-home p:hover{
+            cursor: pointer;
+        }
+        .forms{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .forms input{
+            display: flex;
+            height: 70px;
+            width: 400px;
+            border-radius: 20px;
+            padding: 10px;
+            background-color: transparent;
+            border-style: none;
+            border: 2px solid;
+            margin-bottom: 40px;
+            font-size: 20px;
+        }
+        .heading{
+            display: flex;
+            justify-content: center;
+            margin-top: 250px;
+            font-size: 60px;
+        }
+        .searchBtns{
+            height: 40px;
+            width: 90px;
+            margin-left: 150px;
+            border-style: none;
+            border-radius: 10px;
+            box-shadow: -4px 15px 15px rgba(0,0,0,0.1), -4px 15px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        .info-container{
+            box-shadow: -4px 15px 10px rgba(0,0,0,0.08),-4px 10px 15px rgba(0,0,0,0.08);
+        }
+        #embassy-container{
+            justify-self: center;
+            margin: 30px;
+        }
+        #country-container{
+            display: flex;
+            flex-direction: column;
+            margin: 30px;
+            width: 500px;
+        }
+        #activity-container{
+            justify-self: center;
+            margin: 30px;
+        }
+        #briefinfo-container{
+            justify-self: center;
+            margin: 30px;
+        }
+        .embassy-table{
+            border-collapse: collapse;
+            height: 500px;
+            width: 800px;
+            text-align: center;
+        }
+        .country-table1{
+            border-collapse: collapse;
+            margin: 20px;
+            text-align: center;
+            height: 200px;
+            width: 500px;
+        }
+        .country-table2{
+            border-collapse: collapse;
+            margin: 20px;
+            text-align: center;
+            height: 200px;
+            width: 500px;
+        }
+        .country-table3{
+            border-collapse: collapse;
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+          <a href=""><img src="./assets/icons/trip.gif" alt="Logo"/></a>
+          <h1 style="color: black;">Destination</h1>
+        </div>
+        <div class="nav-content">
+          <li><a href="./homepage.html#home">Home</a></li>
+          <li><a href="./homepage.html#services">Services</a></li>
+          <li><a href="./homepage.html#about">About</a></li>
+          <li><a href="homepage.html#packages">Packages</a></li>
+          <li><a href="./countryInfo.html">Country info</a></li>
+          <li><a href="homepage.html#tripbookings">Book</a></li>
+          <li><a href="homepage.html#Reviews">Reviews</a></li>
+          <li><a href="homepage.html#contact">Contact</a></li>
+          <!-- Admin login inside nav-content -->
+          <div class="admin-login">
+            <li><a href="">Guest</a></li>
+            <button>Admin Login</button>
+          </div>
+        </div>
+        <div class="menu">
+          <button id="cross-menu">&#x2715;</button>
+          <button id="menu-bar">&#9776;</button>
+        </div>
+    </nav>
+    <div class="heading">where to?</div>
+    <div class="country-home">
+        <p class="country-info">Find an embassy in Abroad</p>
+        <p class="country-info">Country details</p>
+        <p class="country-info">Country Activities</p>
+        <p class="country-info">Brief info about country</p>   
+    </div>
+    <div class="forms">
+        <div id="embassy-form">
+            <input type="search" name="" id="source" placeholder="Country name" required>
+            <input type="search" name="" id="destination" placeholder="Where to go?" required>
+            <button class="searchBtns">search</button>
+        </div>
+        <div id="country-details-form">
+            <input type="search" name="" id="countrysearch" placeholder="Country name?" >
+            <button class="searchBtns">search</button>
+        </div>
+        <div id="country-activities-form">
+            <input type="search" name="" id="activitysearch" placeholder="Country Activity">
+            <button class="searchBtns">search</button>
+        </div>
+        <div id="brief-info-form">
+            <input type="search" name="" id="briefsearch" placeholder="About country">
+            <button class="searchBtns">search</button>
+        </div>
+    </div>
+    <div id="embassy-container"></div>
+    <div id="country-container"></div>
+    <div id="activity-container"></div>
+    <div id="briefinfo-container"></div>
+    <script src="./countryinfo.js"></script>
+</body>
+</html>
