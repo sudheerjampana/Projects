@@ -186,7 +186,7 @@ let findEmbassyData= async(source,destination)=>{
     	headers: {
             // 'x-rapidapi-key': '939955acbdmshc8c53e709620035p122b8cjsnfd8562c02c8e',
 		    // 'x-rapidapi-host': 'travel-info-api.p.rapidapi.com'
-            'x-rapidapi-key': '325f15d009mshe82c12d92ac8cf3p1b573cjsne1f2444b13cd',
+            'x-rapidapi-key': 'cb580d2295msh9be939cf827fbd1p19931fjsn619d9c22c849',
 		    'x-rapidapi-host': 'travel-info-api.p.rapidapi.com'
     	}
     };
@@ -250,9 +250,10 @@ let countrySearch=document.getElementById("countrysearch")
 
 
 let allCountryData=(cdata)=>{
-    let heading=document.createElement('caption')
-    heading.innerHTML="<h1>Country Details</h1>"
-    countryContainer.append(heading)
+    // let heading=document.createElement('caption')
+    // heading.innerHTML="Country Details"
+    // heading.classList.add("country-details-heading")
+    // countryContainer.append(heading)
     let table=document.createElement("table")
     countryContainer.append(table)
     table.classList.add("country-table1")
@@ -347,7 +348,7 @@ let findCountryData=async(country)=>{
     const options = {
         method: 'GET',
         headers: {
-            'x-rapidapi-key': '325f15d009mshe82c12d92ac8cf3p1b573cjsne1f2444b13cd',
+            'x-rapidapi-key': 'cb580d2295msh9be939cf827fbd1p19931fjsn619d9c22c849',
 		    'x-rapidapi-host': 'travel-info-api.p.rapidapi.com'
         }
     };
@@ -390,9 +391,9 @@ countrySearch.addEventListener("input", () => {
 let allCountryActivities=(ca_data)=>{
     let c=0
     console.log(ca_data["activities"]);
-    let heading=document.createElement('caption')
-    heading.innerHTML="<h1>Activity Details</h1>"
-    activityContainer.append(heading)
+    // let heading=document.createElement('caption')
+    // heading.innerHTML="<h1>Activity Details</h1>"
+    // activityContainer.append(heading)
     
 for(let i of ca_data["activities"]){
     let div=document.createElement("div")
@@ -422,7 +423,7 @@ let findActivityData=async(activity)=>{
     const options = {
         method: 'GET',
         headers: {
-            'x-rapidapi-key': '325f15d009mshe82c12d92ac8cf3p1b573cjsne1f2444b13cd',
+            'x-rapidapi-key': 'cb580d2295msh9be939cf827fbd1p19931fjsn619d9c22c849',
 		    'x-rapidapi-host': 'travel-info-api.p.rapidapi.com'
         }
     };
@@ -520,7 +521,7 @@ let findBriefData=async(country)=>{
     const options = {
         method: 'GET',
         headers: {
-            'x-rapidapi-key': '325f15d009mshe82c12d92ac8cf3p1b573cjsne1f2444b13cd',
+            'x-rapidapi-key': 'cb580d2295msh9be939cf827fbd1p19931fjsn619d9c22c849',
 		    'x-rapidapi-host': 'travel-info-api.p.rapidapi.com'
         }
     };

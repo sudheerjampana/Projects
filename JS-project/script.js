@@ -13,6 +13,15 @@ let handleSignIn = () => {
         user_credentials.forEach((v) => {
             if ((v.mail == user_name || v.mob == user_name) && (v.password === user_password)) {
                 alert("Login successful!")
+                let details={
+                    name:v.name,
+                    mail:v.mail,
+                    mobile:v.mob,
+                    is_login:true
+                }
+                let login_details=[]
+                login_details.push(JSON.stringify(details))
+                window.sessionStorage.setItem("login_details",login_details)
                 match = true
                 location.assign('homepage.html')
 
@@ -43,51 +52,54 @@ for(let i=0; i<bookingBtn.length;i++){
 }
 
 let bookingForm=document.getElementById("booking-data")
-
-
+let login_status=window.sessionStorage.getItem("login_details")
+login_status=JSON.parse(login_status)
 // phone where mem start end info
 bookingForm.addEventListener('submit',(eve)=>{
     eve.preventDefault();
-    let candidateName=document.getElementById("name").value
-    let candidateMob=document.getElementById("phone").value
-    let whereToGo=document.getElementById("where").value
-    let starting=document.getElementById("start").value
-    let ending=document.getElementById("end").value
-    let extraInfo=document.getElementById("info").value
+    if(login_status){
+        let candidateName=document.getElementById("name").value
+        let candidateMob=document.getElementById("phone").value
+        let whereToGo=document.getElementById("where").value
+        let starting=document.getElementById("start").value
+        let ending=document.getElementById("end").value
+        let extraInfo=document.getElementById("info").value
 
-    let bookingDetails={
-        Name:candidateName,
-        Mobile:candidateMob,
-        WhereToPlanned:whereToGo,
-        StartDate:starting,
-        EndDate:ending,
-        ExtraDetails:extraInfo
+        let bookingDetails={
+            Name:candidateName,
+            Mobile:candidateMob,
+            WhereToPlanned:whereToGo,
+            StartDate:starting,
+            EndDate:ending,
+            ExtraDetails:extraInfo
 
-    }
-    let existing=window.localStorage.getItem("Booking Details")
-    if(existing){
-        details_array=JSON.parse(existing)
-        details_array.push(bookingDetails)
-        converted=JSON.stringify(details_array)
-        window.localStorage.setItem('Booking Details',converted)
-        // console.log(details_array,typeof(details_array))
-        details_array.push(bookingDetails)
-        location.assign('bookingstatus.html')
+        }
+        let existing=window.localStorage.getItem("Booking Details")
+        if(existing){
+            details_array=JSON.parse(existing)
+            details_array.push(bookingDetails)
+            converted=JSON.stringify(details_array)
+            window.localStorage.setItem('Booking Details',converted)
+            // console.log(details_array,typeof(details_array))
+            details_array.push(bookingDetails)
+            location.assign('bookingstatus.html')
 
+        }else{
+            let booking_details=[]
+            booking_details.push(bookingDetails)
+            book=JSON.stringify(booking_details)
+            window.localStorage.setItem("Booking Details",book)
+        }
+        // console.log(book);
+
+        bookingForm.reset()
+        // console.log(bookingDetails);
     }else{
-        let booking_details=[]
-        booking_details.push(bookingDetails)
-        book=JSON.stringify(booking_details)
-        window.localStorage.setItem("Booking Details",book)
-    }
-    // console.log(book);
-    
-    bookingForm.reset()
-    // console.log(bookingDetails);
-    
+        console.log("login first");
+        alert('Please Login first')
+        location.assign("login.html")
+    }  
 })
-// let exist=window.localStorage.getItem("Booking Details")
-// console.log(JSON.parse(exist));
 
 
 // =============country info logic started from here===============================

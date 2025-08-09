@@ -60,10 +60,7 @@
             margin: 30px;
         }
         #country-container{
-            display: flex;
-            flex-direction: column;
-            margin: 30px;
-            width: 500px;
+            justify-items: center;
         }
         #activity-container{
             justify-self: center;
@@ -82,6 +79,7 @@
         .country-table1{
             border-collapse: collapse;
             margin: 20px;
+            justify-self: center;
             text-align: center;
             height: 200px;
             width: 500px;
@@ -89,6 +87,7 @@
         .country-table2{
             border-collapse: collapse;
             margin: 20px;
+            justify-self: center;
             text-align: center;
             height: 200px;
             width: 500px;
@@ -96,7 +95,18 @@
         .country-table3{
             border-collapse: collapse;
             margin: 20px;
+            justify-self: center;
             text-align: center;
+        }
+        .activityContainer{
+            justify-self: center;
+            border-radius: 15px;
+            box-shadow: -4px 15px 10px rgba(0,0,0,0.08),-4px 10px 15px rgba(0,0,0,0.08);
+            margin: 20px;
+            padding: 20px;
+        }
+        #activity-container{
+            justify-items: center;
         }
     </style>
 </head>
@@ -153,8 +163,8 @@
         </div>
     </div>
     <div id="embassy-container"></div>
-    <div id="country-container"></div>
-    <div id="activity-container"></div>
+    <div id="country-container"><h1>Country Details</h1></div>
+    <div id="activity-container"><h1>Activity details</h1></div>
     <div id="briefinfo-container"></div>
     <script src="./countryinfo.js"></script>
 </body>
