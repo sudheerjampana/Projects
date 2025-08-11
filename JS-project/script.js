@@ -89,6 +89,7 @@ bookingForm.addEventListener('submit',(eve)=>{
             booking_details.push(bookingDetails)
             book=JSON.stringify(booking_details)
             window.localStorage.setItem("Booking Details",book)
+            location.assign('bookingstatus.html')
         }
         // console.log(book);
 
